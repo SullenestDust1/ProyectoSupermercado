@@ -5,8 +5,9 @@
 #ifndef PROYECTOSUPERMERCADO_VCAJERO_H
 #define PROYECTOSUPERMERCADO_VCAJERO_H
 
-
-class VCajero {
+#include "../Librerias/Genericas/VGeneral.h"
+class VCajero : public VGeneral{
+public:
 
 };
 

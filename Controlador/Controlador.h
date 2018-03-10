@@ -1,0 +1,14 @@
+//
+// Created by juan on 9/03/18.
+//
+
+#ifndef PROYECTOSUPERMERCADO_CONTROLADOR_H
+#define PROYECTOSUPERMERCADO_CONTROLADOR_H
+
+
+class Controlador {
+
+};
+
+
+#endif //PROYECTOSUPERMERCADO_CONTROLADOR_H
