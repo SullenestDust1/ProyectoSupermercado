@@ -9,7 +9,7 @@
 #include "MCajaRegistradora.h"
 class MSupermercado {
 private:
-    Lista<CajaRegistradora> ListaCajas;
+    Lista<MCajaRegistradora> ListaCajas;
 
 public:
     float CalcTotalVentasDia();
