@@ -1,0 +1,14 @@
+//
+// Created by marco on 3/9/18.
+//
+
+#ifndef PROYECTOSUPERMERCADO_CARRITOCOMPRAS_H
+#define PROYECTOSUPERMERCADO_CARRITOCOMPRAS_H
+
+
+class CarritoCompras {
+
+};
+
+
+#endif //PROYECTOSUPERMERCADO_CARRITOCOMPRAS_H

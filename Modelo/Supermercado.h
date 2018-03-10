@@ -1,0 +1,14 @@
+//
+// Created by marco on 3/9/18.
+//
+
+#ifndef PROYECTOSUPERMERCADO_SUPERMERCADO_H
+#define PROYECTOSUPERMERCADO_SUPERMERCADO_H
+
+
+class Supermercado {
+
+};
+
+
+#endif //PROYECTOSUPERMERCADO_SUPERMERCADO_H
