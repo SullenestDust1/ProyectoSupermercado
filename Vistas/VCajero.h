@@ -1,0 +1,14 @@
+//
+// Created by juan on 9/03/18.
+//
+
+#ifndef PROYECTOSUPERMERCADO_VCAJERO_H
+#define PROYECTOSUPERMERCADO_VCAJERO_H
+
+
+class VCajero {
+
+};
+
+
+#endif //PROYECTOSUPERMERCADO_VCAJERO_H
