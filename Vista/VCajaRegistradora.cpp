@@ -14,6 +14,6 @@ void VCajaRegistradora::ImprimirCajaR(int tclientatend, int cantidadprodvend, fl
     ImprimirNro("\n\n  Cantidad de productos vendidos: ", cantidadprodvend);
     ImprimirNroDecimal("\n\n  Monto de los productos (BSF): ", montobsf);
     ImprimirLineasBlanco(2);
-    //Pausa();
+    //Pausa();//
 
 }

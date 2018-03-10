@@ -12,6 +12,6 @@ public:
 
     void ImprimirCajaR(int tclientatend, int cantidadprodvend, float montobsf);
 };
-
+//
 
 #endif //PROYECTOSUPERMERCADO_VCAJAREGISTRADORA_H

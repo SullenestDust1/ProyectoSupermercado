@@ -11,6 +11,6 @@ public:
     VSupermercado();
 
 };
-
+//
 
 #endif //PROYECTOSUPERMERCADO_VSUPERMERCADO_H

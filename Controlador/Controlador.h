@@ -6,9 +6,11 @@
 #define PROYECTOSUPERMERCADO_CONTROLADOR_H
 
 
+
 class Controlador {
 
 };
+
 
 
 #endif //PROYECTOSUPERMERCADO_CONTROLADOR_H
