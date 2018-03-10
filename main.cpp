@@ -1,4 +1,3 @@
-#include <iostream>
 /*#include "Librerias/Lista/Lista.h"
 #include "Librerias/Cola/Cola.h"
 #include "Librerias/Pila/Pila.h"
@@ -11,13 +10,18 @@ int main() {
 //*/
 
 
-#include "Controlador/Controlador.h"
 #include "Librerias/Genericas/VGeneral.h"
-
+#include "Modelo/MSupermercado.h"
+#include "Controlador/Controlador.h"
+using namespace std;
 int main()
 {
     int opc;
     VGeneral  vg;
+    MSupermercado ms;
+    MCajaRegistradora mc;
+    MCarritoCompras mcc;
+    MProducto mp;
     Controlador c;
     do
     {

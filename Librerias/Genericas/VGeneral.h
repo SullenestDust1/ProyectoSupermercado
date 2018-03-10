@@ -1,7 +1,7 @@
 /*
  *  VGeneral.h
  *  Creado: 16/02/2011
- *  Autores: Prof. Margarita Pereira, Prof. Rosa D�az,
+ *  Autores: Prof. Margarita Pereira, Prof. Rosa Diaz,
  *                  Prof. Giovanni Torrealba, Prof. Luis Pereira
  *  Ajustado: 07/05/2012 Prof. Margarita Pereia
  */
@@ -67,6 +67,5 @@ class VGeneral{
       void GrabarDatoNroDecimalArchivo(std::ofstream &archivo, double nro);
       void CerrarArchivoSalida(std::ofstream &archivo);
 };
-
 
 #endif

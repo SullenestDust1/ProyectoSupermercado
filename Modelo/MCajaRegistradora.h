@@ -4,7 +4,7 @@
 
 #ifndef PROYECTOSUPERMERCADO_MCAJAREGISTRADORA_H
 #define PROYECTOSUPERMERCADO_MCAJAREGISTRADORA_H
-
+//
 #include "../Librerias/Cola/Cola.h"
 #include "MCarritoCompras.h"
 #include "MCajero.h"

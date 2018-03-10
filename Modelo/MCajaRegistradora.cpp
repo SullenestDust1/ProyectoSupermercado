@@ -3,7 +3,7 @@
 //
 
 #include "MCajaRegistradora.h"
-
+//
 float MCajaRegistradora::CalcCorteVentas() {
     return 0;
 }

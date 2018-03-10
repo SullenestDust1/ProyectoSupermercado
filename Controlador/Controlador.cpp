@@ -1,8 +1,14 @@
 //
-// Created by juan on 9/03/18.
+
+
 //
+// Created by juan on 9/03/18.
+
 
 #include "Controlador.h"
+
+Controlador::Controlador() {
+}
 
 void Controlador::CargarCajas() {
 
@@ -19,8 +25,4 @@ vsup.Limpiar();
     }else{
         vsup.ImprimirMensaje("\n LAS CAJAS YA FUERON CARGADAS!! \n");
     }
-}
-
-Controlador::Controlador() {
-    this->chequeocajas=false;
 }
