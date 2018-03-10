@@ -6,9 +6,20 @@
 #define PROYECTOSUPERMERCADO_CONTROLADOR_H
 
 
-
+#include "../Modelo/MSupermercado.h"
+#include "../Vista/VSupermercado.h"
 class Controlador {
-
+private:
+    MSupermercado msup;
+    VSupermercado vsup;
+ //   bool chequeosala, chequeopeli,chequeoentrada;  //! los checkeos
+public:
+    Controlador();
+   /* void CargarSalas();
+    void CargarPeliculas();
+    void ProcesarEntradas();
+    void ReporteCinex();
+    void ReportePeli();*/
 };
 
 
