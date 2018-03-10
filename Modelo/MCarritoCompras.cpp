@@ -3,3 +3,15 @@
 //
 
 #include "MCarritoCompras.h"
+
+float MCarritoCompras::CalcularTotalVenta() {
+    return 0;
+}
+
+int MCarritoCompras::CalcNumProductos() {
+    return 0;
+}
+
+float MCarritoCompras::CalcIva() {
+    return 0;
+}
