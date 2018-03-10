@@ -12,6 +12,6 @@ int MCarritoCompras::CalcNumProductos() {
     return 0;
 }
 
-float MCarritoCompras::CalcIva() {
+float MCarritoCompras::CalcIvaTotal() {
     return 0;
 }
