@@ -6,9 +6,14 @@
 #define PROYECTOSUPERMERCADO_SUPERMERCADO_H
 
 #include "../Librerias/Lista/Lista.h"
-#include "CajaRegistradora.h"
+#include "MCajaRegistradora.h"
 class Supermercado {
+private:
     Lista<CajaRegistradora> ListaCajas;
+
+public:
+    float CalcTotalVentasDia();
+    int ClientesAtentidos();
 
 };
 
