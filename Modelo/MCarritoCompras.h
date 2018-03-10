@@ -5,9 +5,10 @@
 #ifndef PROYECTOSUPERMERCADO_CARRITOCOMPRAS_H
 #define PROYECTOSUPERMERCADO_CARRITOCOMPRAS_H
 
-
-class CarritoCompras {
-
+#include "../Librerias/Pila/Pila.h"
+#include "../Librerias/Genericas/MArticulo.h"
+class MCarritoCompras {
+    Pila<MArticulo>
 };
 
 

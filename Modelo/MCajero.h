@@ -5,8 +5,10 @@
 #ifndef PROYECTOSUPERMERCADO_CAJERO_H
 #define PROYECTOSUPERMERCADO_CAJERO_H
 
+#include "../Librerias/Genericas/MPersona.cpp"
 
-class Cajero {
+class MCajero: public MPersona {
+
 
 };
 

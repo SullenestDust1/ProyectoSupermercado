@@ -6,9 +6,13 @@
 #define PROYECTOSUPERMERCADO_CAJAREGISTRADORA_H
 
 #include "../Librerias/Cola/Cola.h"
-#include "CarritoCompras.h"
+#include "MCarritoCompras.h"
 class CajaRegistradora {
-    Cola<CarritoCompras> colaCarros;
+private:
+    Cola<MCarritoCompras> colaCarros;
+
+public:
+
 };
 
 

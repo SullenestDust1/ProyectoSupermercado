@@ -3,4 +3,4 @@ project(ProyectoSupermercado)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ProyectoSupermercado main.cpp Modelo/Cajero.cpp Modelo/Cajero.h)
+add_executable(ProyectoSupermercado main.cpp Modelo/MCajero.cpp Modelo/MCajero.h)
