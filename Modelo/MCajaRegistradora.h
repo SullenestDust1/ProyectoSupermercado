@@ -7,9 +7,11 @@
 
 #include "../Librerias/Cola/Cola.h"
 #include "MCarritoCompras.h"
+#include "MCajero.h"
 class MCajaRegistradora {
 private:
     Cola<MCarritoCompras> colaCarros;
+    MCajero cajero;
 
 public:
 
