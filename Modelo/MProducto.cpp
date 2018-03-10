@@ -4,6 +4,10 @@
 
 #include "MProducto.h"
 
+MProducto::MProducto() {
+
+}
+
 float MProducto::CalcIva() {
     return pvp * 0.12;
 }
@@ -23,3 +27,4 @@ float MProducto::getPeso() const {
 void MProducto::setPeso(float peso) {
     MProducto::peso = peso;
 }
+

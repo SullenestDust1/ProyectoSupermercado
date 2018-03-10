@@ -13,6 +13,7 @@ private:
     float peso;
 
 public:
+    MProducto();
     const string &getFechaExp() const;
     void setFechaExp(const string &fechaExp);
     float getPeso() const;
@@ -21,6 +22,5 @@ public:
 
 
 };
-
 
 #endif //PROYECTOSUPERMERCADO_MPRODUCTO_H
