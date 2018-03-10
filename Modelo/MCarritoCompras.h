@@ -15,7 +15,8 @@ public:
 private:
     float CalcularTotalVenta();
     int CalcNumProductos();
-    float CalcIva();
+    float CalcIvaTotal();
+
 
 
 };

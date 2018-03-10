@@ -9,8 +9,16 @@
 
 class MProducto: public MArticulo {
 private:
+    string fechaExp;
+    float peso;
 
 public:
+    const string &getFechaExp() const;
+    void setFechaExp(const string &fechaExp);
+    float getPeso() const;
+    void setPeso(float peso);
+    float CalcIva();
+
 
 };
 

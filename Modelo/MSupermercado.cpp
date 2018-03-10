@@ -4,10 +4,10 @@
 
 #include "MSupermercado.h"
 
-int Supermercado::ClientesAtentidos() {
+int MSupermercado::ClientesAtentidos() {
     return 0;
 }
 
-float Supermercado::CalcTotalVentasDia() {
+float MSupermercado::CalcTotalVentasDia() {
     return 0;
 }
