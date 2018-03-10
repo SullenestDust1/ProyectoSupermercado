@@ -33,6 +33,7 @@ class MPersona
               char GetSexo();
               char GetEdoCivil();
               int GetEdad();
-}; 
+};
+
 #endif     
 

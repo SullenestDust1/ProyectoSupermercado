@@ -67,4 +67,6 @@ class VGeneral{
       void GrabarDatoNroDecimalArchivo(std::ofstream &archivo, double nro);
       void CerrarArchivoSalida(std::ofstream &archivo);
 };
+
+#include "VGeneral.cpp"
 #endif
