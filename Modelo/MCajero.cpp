@@ -3,3 +3,11 @@
 //
 
 #include "MCajero.h"
+
+const string &MCajero::getCodigo() const {
+    return codigo;
+}
+
+void MCajero::setCodigo(const string &codigo) {
+    MCajero::codigo = codigo;
+}

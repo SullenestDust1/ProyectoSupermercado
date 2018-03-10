@@ -8,6 +8,14 @@
 #include "../Librerias/Genericas/MPersona.cpp"
 
 class MCajero: public MPersona {
+public:
+    string codigo;
+
+    const string &getCodigo() const;
+
+    void setCodigo(const string &codigo);
+
+private:
 
 
 };
