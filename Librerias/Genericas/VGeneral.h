@@ -1,7 +1,7 @@
 /*
  *  VGeneral.h
  *  Creado: 16/02/2011
- *  Autores: Prof. Margarita Pereira, Prof. Rosa Díaz,
+ *  Autores: Prof. Margarita Pereira, Prof. Rosa Dï¿½az,
  *                  Prof. Giovanni Torrealba, Prof. Luis Pereira
  *  Ajustado: 07/05/2012 Prof. Margarita Pereia
  */
@@ -68,5 +68,5 @@ class VGeneral{
       void CerrarArchivoSalida(std::ofstream &archivo);
 };
 
-#include "VGeneral.cpp"
+
 #endif
