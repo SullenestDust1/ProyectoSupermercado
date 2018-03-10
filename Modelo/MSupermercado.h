@@ -2,12 +2,12 @@
 // Created by marco on 3/9/18.
 //
 
-#ifndef PROYECTOSUPERMERCADO_SUPERMERCADO_H
-#define PROYECTOSUPERMERCADO_SUPERMERCADO_H
+#ifndef PROYECTOSUPERMERCADO_MSUPERMERCADO_H
+#define PROYECTOSUPERMERCADO_MSUPERMERCADO_H
 
 #include "../Librerias/Lista/Lista.h"
 #include "MCajaRegistradora.h"
-class Supermercado {
+class MSupermercado {
 private:
     Lista<CajaRegistradora> ListaCajas;
 
@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif //PROYECTOSUPERMERCADO_SUPERMERCADO_H
+#endif //PROYECTOSUPERMERCADO_MSUPERMERCADO_H
