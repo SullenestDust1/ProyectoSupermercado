@@ -6,9 +6,18 @@
 #define PROYECTOSUPERMERCADO_CARRITOCOMPRAS_H
 
 #include "../Librerias/Pila/Pila.h"
-#include "../Librerias/Genericas/MArticulo.h"
+#include "MProducto.h"
+
 class MCarritoCompras {
-    Pila<MArticulo>
+public:
+    Pila<MProducto> pilaProductos;
+
+private:
+    float CalcularTotalVenta();
+    int CalcNumProductos();
+    float CalcIva();
+
+
 };
 
 

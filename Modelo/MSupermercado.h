@@ -12,6 +12,8 @@ private:
     Lista<CajaRegistradora> ListaCajas;
 
 public:
+    float CalcTotalVentasDia();
+    int ClientesAtentidos();
 
 };
 
