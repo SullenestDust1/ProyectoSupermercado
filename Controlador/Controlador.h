@@ -12,9 +12,11 @@ class Controlador {
 private:
     MSupermercado msup;
     VSupermercado vsup;
- //   bool chequeosala, chequeopeli,chequeoentrada;  //! los checkeos
+    bool chequeocajas; // chequeopeli,chequeoentrada;  //! los checkeos
 public:
     Controlador();
+
+    void CargarCajas();
    /* void CargarSalas();
     void CargarPeliculas();
     void ProcesarEntradas();
