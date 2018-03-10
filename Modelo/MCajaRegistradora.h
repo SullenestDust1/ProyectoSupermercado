@@ -14,6 +14,10 @@ private:
     MCajero cajero;
 
 public:
+    float CalcCorteVentas();
+    float CalcTotalVentasDia();
+    int NumClientes();
+    int ProductosVendidos();
 
 };
 

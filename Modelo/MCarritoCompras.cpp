@@ -8,10 +8,10 @@ float MCarritoCompras::CalcularTotalVenta() {
     return 0;
 }
 
-int MCarritoCompras::CalcNumProductos() {
+float MCarritoCompras::CalcIvaTotal() {
     return 0;
 }
 
-float MCarritoCompras::CalcIvaTotal() {
+int MCarritoCompras::NumProductos() {
     return 0;
 }

@@ -3,3 +3,19 @@
 //
 
 #include "MCajaRegistradora.h"
+
+float MCajaRegistradora::CalcCorteVentas() {
+    return 0;
+}
+
+float MCajaRegistradora::CalcTotalVentasDia() {
+    return 0;
+}
+
+int MCajaRegistradora::NumClientes() {
+    return 0;
+}
+
+int MCajaRegistradora::ProductosVendidos() {
+    return 0;
+}
