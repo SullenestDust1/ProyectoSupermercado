@@ -56,6 +56,8 @@ void Controlador::CargarArticulos() {
         mpro.setFechaExp(f);
         mpro.setPeso(p);
 
+        
+
     }else{
         vsup.ImprimirMensaje("\n TIENEN QUE ESTAR CARGADAS LAS CAJAS \n");
     }
