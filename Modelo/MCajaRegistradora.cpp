@@ -4,7 +4,7 @@
 
 #include "MCajaRegistradora.h"
 //
-/*
+
 float MCajaRegistradora::CalcCorteVentas() {
     return 0;
 }
@@ -20,4 +20,13 @@ int MCajaRegistradora::NumClientes() {
 int MCajaRegistradora::ProductosVendidos() {
     return 0;
 }
-*/
+
+MCajaRegistradora::MCajaRegistradora() {
+
+}
+
+MCajero MCajaRegistradora::getMCajero() {
+    return this->cajero;
+}
+
+

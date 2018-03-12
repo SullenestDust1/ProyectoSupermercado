@@ -14,11 +14,17 @@ private:
     Cola<MCarritoCompras> colaCarros;
     MCajero cajero;
 
+
 public:
-   /* float CalcCorteVentas();
+    MCajaRegistradora();
+
+    float CalcCorteVentas();
     float CalcTotalVentasDia();
     int NumClientes();
-    int ProductosVendidos();*/
+    int ProductosVendidos();
+
+    // bromas del clion//
+     MCajero getMCajero();
 
 };
 

@@ -8,23 +8,41 @@
 #include "Controlador.h"
 
 Controlador::Controlador() {
+    this->chequeocajas = false;
+    this->chequeocarritos = false;
+
 }
 
 void Controlador::CargarCajas() {
 
 vsup.Limpiar();
     if (!this->chequeocajas){
-        MCajero mcaj;
+        MCajaRegistradora mcajreg;
         string n,a,c;
         for (int i = 0; i < 5; ++i) { //porque son 5 cajas
 
             n = vsup.LeerString("\n Nombre: ");
             c = vsup.LeerString("\n Cedula: ");
-            mcaj.setNombre(n);
-            mcaj.setCedula(c);
+
+            mcajreg.getMCajero().setNombre(n);
+            mcajreg.getMCajero().setCedula(c);
+          //  mca
+
+
 
         }
+        this->chequeocajas = true;
     }else{
         vsup.ImprimirMensaje("\n LAS CAJAS YA FUERON CARGADAS!! \n");
     }
+}
+
+void Controlador::CargarArticulos() {
+    if (this->chequeocajas && this->chequeocarritos){
+
+
+    }else{
+        vsup.ImprimirMensaje("\n TIENEN QUE ESTAR CARGADAS LAS CAJAS \n");
+    }
+
 }
