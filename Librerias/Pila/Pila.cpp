@@ -1,3 +1,4 @@
+//
 #include "Pila.h"
 template <class Tipo>
 Pila<Tipo>::Pila()
@@ -72,7 +73,7 @@ Nodopila<Tipo>* Pila<Tipo>::ObtTope()
 template <class Tipo>
 void Pila<Tipo>::AsigTope(Nodopila<Tipo> *p)
 {
-  Tope = *p;
+  Tope = p;
 };
 
 //===========================================================================
