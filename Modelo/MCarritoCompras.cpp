@@ -17,5 +17,5 @@ int MCarritoCompras::NumProductos() {
 }
 
 MCliente MCarritoCompras::getCliente() {
-    return MCliente();
+    return cliente;
 }

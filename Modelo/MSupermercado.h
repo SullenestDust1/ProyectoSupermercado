@@ -15,7 +15,8 @@ private:
 
 public:
     MSupermercado();
-    MProducto BuscarArticuloCod(string cod);
+    bool BuscarArticuloCod(string cod, MProducto &mpro);
+    void AgregarArticulo(MProducto mpro);
     float CalcTotalVentasDia();
     int ClientesAtentidos();
 
