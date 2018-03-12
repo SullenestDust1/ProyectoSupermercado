@@ -1,7 +1,7 @@
 //
 // Created by marco on 3/9/18.
 //
-
+//
 #ifndef PROYECTOSUPERMERCADO_MPRODUCTO_H
 #define PROYECTOSUPERMERCADO_MPRODUCTO_H
 
