@@ -17,6 +17,7 @@ public:
     float CalcularTotalVenta();
     int NumProductos();
     float CalcIvaTotal();
+    Pila<MProducto> getPilaProductos();
     MCliente getCliente();
 
 

@@ -10,8 +10,12 @@
 #include "../Vista/VSupermercado.h"
 class Controlador {
 private:
-    MSupermercado msup;
+
     VSupermercado vsup;
+    ///////////////////
+    MCarritoCompras mcar; // carrito pajuo;
+    MCajaRegistradora mcajreg; // caja registradora
+    MSupermercado msup; // supermercado
     // esto es para cargalos antes
 
 
@@ -20,7 +24,8 @@ public:
     Controlador();
     void CargarCajas();
     void CargarArticulos();
-    void ProcesarCarrito();
+    void ProcesarArticulos();
+    void ProcesarCarritos();
    /* void CargarSalas();
     void CargarPeliculas();
     void ProcesarEntradas();

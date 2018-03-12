@@ -53,17 +53,19 @@ int main()
         vg.ImprimirEncabezado("\n      M E N U  O P C I O N E S\n","      =======  ===============");
         vg.ImprimirMensaje("   1. CARGAR CAJEROS\n");
         vg.ImprimirMensaje("   2. CARGAR ARTICULOS\n");
-        vg.ImprimirMensaje("   3. PROCESAR CARRITOS\n");
-        vg.ImprimirMensaje("   4. REPORTE\n");
-        vg.ImprimirMensaje("   5. FINALIZAR\n\n");
+        vg.ImprimirMensaje("   3. PROCESAR ARTICULOS\n");
+        vg.ImprimirMensaje("   4. AÑADIR CARRITO A LA COLA\n");
+        vg.ImprimirMensaje("   4. PROCESAR CARRITO \n");
+        vg.ImprimirMensaje("   5. REPORTE\n");
+        vg.ImprimirMensaje("   6. FINALIZAR\n\n");
         opc = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,5);
         switch (opc)
         {
-            case 1: //c.CargarPeliculas();
+            case 1: c.CargarCajas();
                 break;
             case 2: c.CargarArticulos();
                 break;
-            case 3: c.ProcesarCarrito();
+            case 3: c.ProcesarArticulos();
                 break;
             case 4: //c.ReporteCinex();
                 break;

@@ -12,15 +12,17 @@ class MCajaRegistradora {
 private:
     Cola<MCarritoCompras> colaCarros;
     MCajero cajero;
-
+    long numero; // numero de la caja registradora
 public:
     MCajaRegistradora();
-
     float CalcCorteVentas();
     float CalcTotalVentasDia();
     int NumClientes();
     int ProductosVendidos();
+    long getNumero() const;
+    void setNumero(long numero);
 
+    void AgregarCarrito(MCarritoCompras mcar);
     // bromas del clion//
      MCajero getMCajero();
 

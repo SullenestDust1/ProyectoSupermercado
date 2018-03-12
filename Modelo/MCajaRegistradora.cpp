@@ -29,4 +29,17 @@ MCajero MCajaRegistradora::getMCajero() {
     return this->cajero;
 }
 
+long MCajaRegistradora::getNumero() const {
+    return numero;
+}
+
+void MCajaRegistradora::setNumero(long numero) {
+    this->numero = numero;
+}
+
+void MCajaRegistradora::AgregarCarrito(MCarritoCompras mcar) {
+    this->colaCarros.Insertar(mcar);
+
+}
+
 
