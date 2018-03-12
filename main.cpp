@@ -35,6 +35,7 @@ int main()
 using namespace std;
 int main()
 {
+
     int opc;
     VGeneral  vg;
     Controlador c;
@@ -43,6 +44,7 @@ int main()
     MCarritoCompras mcc;
     MProducto mp;
     Controlador c;*/
+    vg.Pausa();
     do
     {
         vg.Limpiar();
@@ -68,5 +70,6 @@ int main()
         }
     }
     while(opc != 5);
+
     return 0;
 }

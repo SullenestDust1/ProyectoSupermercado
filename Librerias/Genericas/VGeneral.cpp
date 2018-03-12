@@ -6,6 +6,8 @@
  *  Ajustado: 07/05/2012 Prof. Margarita Pereia
  */
 #include "VGeneral.h"
+#include <stdio.h>
+
 #define clear() printf("\033[H\033[J")
 
 VGeneral::VGeneral(){}
@@ -15,7 +17,8 @@ VGeneral::VGeneral(){}
 // Permite hacer una pausa
 void VGeneral::Pausa()
 {
-   system("pause");
+    cout << "Apachurrale enter para continuar" << endl;
+    getchar();
 }
 // Blanquea la pantalla
 void VGeneral::Limpiar()
