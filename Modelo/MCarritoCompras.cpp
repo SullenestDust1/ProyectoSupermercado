@@ -15,3 +15,7 @@ float MCarritoCompras::CalcIvaTotal() {
 int MCarritoCompras::NumProductos() {
     return 0;
 }
+
+MCliente MCarritoCompras::getCliente() {
+    return MCliente();
+}
