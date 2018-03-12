@@ -6,6 +6,8 @@
  *  Ajustado: 07/05/2012 Prof. Margarita Pereia
  */
 #include "VGeneral.h"
+#define clear() printf("\033[H\033[J")
+
 VGeneral::VGeneral(){}
 //--------------------------------------------------------------------------
 // ****************METODOS GENERALES EFECTOS DE PANTALLA********************
@@ -18,7 +20,7 @@ void VGeneral::Pausa()
 // Blanquea la pantalla
 void VGeneral::Limpiar()
 {
-   system("cls");
+ clear();
 }
 // Imprime dos lineas de Encabezado consecutivas
 void VGeneral::ImprimirEncabezado(string msj1, string msj2)

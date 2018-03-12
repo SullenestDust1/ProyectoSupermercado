@@ -9,8 +9,7 @@
 
 class MSupermercado {
 private:
-    //Lista<MCajaRegistradora> ListaCaja;
-    Lista<int> *a;
+    Lista<MCajaRegistradora> ListaCaja;
 
 public:
     MSupermercado();

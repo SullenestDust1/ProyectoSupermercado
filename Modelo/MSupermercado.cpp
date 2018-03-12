@@ -13,5 +13,5 @@ float MSupermercado::CalcTotalVentasDia() {
 }
 
 MSupermercado::MSupermercado() {
-this->a = new Lista<int>();
+
 }
