@@ -7,15 +7,17 @@
 
 #include "../Librerias/Pila/Pila.h"
 #include "MProducto.h"
+#include "MCliente.h"
 
 class MCarritoCompras {
 public:
     Pila<MProducto> pilaProductos;
-
+    MCliente cliente;
 private:
     float CalcularTotalVenta();
     int NumProductos();
     float CalcIvaTotal();
+    MCliente getCliente();
 
 
 };

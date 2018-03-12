@@ -1,7 +1,7 @@
 //
 // Created by marco on 3/9/18.
 //
-
+//
 #include "MProducto.h"
 
 MProducto::MProducto() {
@@ -26,5 +26,13 @@ float MProducto::getPeso() const {
 
 void MProducto::setPeso(float peso) {
     MProducto::peso = peso;
+}
+
+const string &MProducto::getNombre() const {
+    return nombre;
+}
+
+void MProducto::setNombre(const string &nombre) {
+    MProducto::nombre = nombre;
 }
 
