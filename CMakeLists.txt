@@ -10,8 +10,8 @@ ADD_LIBRARY(StaticLib STATIC
         Modelo/MCarritoCompras.cpp
         Librerias/Genericas/MHumano.cpp
         Controlador/Controlador.cpp
-        )
+        Modelo/MCliente.cpp Modelo/MCliente.h)
 
-add_executable(ProyectoSupermercado main.cpp )
+add_executable(ProyectoSupermercado main.cpp)
 
 TARGET_LINK_LIBRARIES( ProyectoSupermercado StaticLib )

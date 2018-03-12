@@ -6,17 +6,11 @@
 #define PROYECTOSUPERMERCADO_MPRODUCTO_H
 
 #include "../Librerias/Genericas/MArticulo.h"
-//
+
 class MProducto: public MArticulo {
 private:
     string fechaExp;
     string nombre;
-public:
-    const string &getNombre() const;
-
-    void setNombre(const string &nombre);
-
-private:
     float peso;
 
 public:
@@ -25,6 +19,8 @@ public:
     void setFechaExp(const string &fechaExp);
     float getPeso() const;
     void setPeso(float peso);
+    const string &getNombre() const;
+    void setNombre(const string &nombre);
     float CalcIva();
 
 
