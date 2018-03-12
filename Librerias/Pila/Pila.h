@@ -24,16 +24,18 @@ class Pila
 typedef Nodopila<Tipo>* Apuntapila;
 
 public:
-  Apuntapila Tope;
-  Pila();
-  bool Vacia();
-  bool Llena();
-  bool Insertar(Tipo Valor);
-  bool Remover(Tipo &Valor);
-  Apuntapila ObtTope();
-  void AsigTope(Apuntapila p);
-  Tipo ObtInfo(Nodopila<Tipo> *p);
-  void AsigInfo(Nodopila<Tipo> *p,Tipo x);
+    Apuntapila Tope;
+    Pila();
+    bool Vacia();
+    bool Llena();
+    bool Insertar(Tipo Valor);
+    bool Remover(Tipo &Valor);
+    Apuntapila ObtTope();
+    void AsigTope(Apuntapila p);
+    Tipo ObtInfo(Nodopila<Tipo> *p);
+    void AsigInfo(Nodopila<Tipo> *p,Tipo x);
+    int numElementos();
+
 };
 
 #include "Pila.cpp"
