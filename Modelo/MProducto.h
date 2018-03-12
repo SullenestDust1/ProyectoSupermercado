@@ -6,7 +6,7 @@
 #define PROYECTOSUPERMERCADO_MPRODUCTO_H
 
 #include "../Librerias/Genericas/MArticulo.h"
-
+//
 class MProducto: public MArticulo {
 private:
     string fechaExp;
