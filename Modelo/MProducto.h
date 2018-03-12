@@ -10,6 +10,13 @@
 class MProducto: public MArticulo {
 private:
     string fechaExp;
+    string nombre;
+public:
+    const string &getNombre() const;
+
+    void setNombre(const string &nombre);
+
+private:
     float peso;
 
 public:

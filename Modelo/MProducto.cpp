@@ -28,3 +28,11 @@ void MProducto::setPeso(float peso) {
     MProducto::peso = peso;
 }
 
+const string &MProducto::getNombre() const {
+    return nombre;
+}
+
+void MProducto::setNombre(const string &nombre) {
+    MProducto::nombre = nombre;
+}
+
