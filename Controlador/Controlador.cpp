@@ -14,7 +14,6 @@ Controlador::Controlador() {
 }
 
 void Controlador::CargarCajas() {
-
 vsup.Limpiar();
     if (!this->chequeocajas){ //revisar
         MCajaRegistradora mcajreg;
@@ -27,9 +26,6 @@ vsup.Limpiar();
             mcajreg.getMCajero().setNombre(n);
             mcajreg.getMCajero().setCedula(c);
           //  mca
-
-
-
         }
         this->chequeocajas = true;
     }else{
@@ -58,16 +54,7 @@ void Controlador::CargarArticulos() {
             mpro.SetDesc(d);
             mpro.setFechaExp(f);
             mpro.setPeso(p);
-
-            if (listap.Vacia()) {
-                listap.InsComienzo(mpro);
-                approd = listap.ObtPrimero();
-            } else {
-
-                listap.InsDerecho(approd, mpro);
-                approd = approd->ObtDer();
-            }
-          //  cout<<"broma. "<<listap.BuscarElemento("123")<<endl;
+            msup.AgregarArticulo(mpro);
 
         resp = vsup.LeerValidarNro("\n Desea Agregar otro articulo ? (1)Si (2)No : ", 1, 2);
     }while(resp==1);
@@ -75,6 +62,48 @@ void Controlador::CargarArticulos() {
 
     }else{
         vsup.ImprimirMensaje("\n TIENEN QUE ESTAR CARGADAS LAS CAJAS \n");
+    }
+
+}
+
+void Controlador::ProcesarCarrito() {
+    if (this->chequeocajas && this->chequeocarritos) { // revisar
+   int resp;
+        MCarritoCompras mcar;
+        // cargamos los datos del cliente
+        string n,c;
+        string cod;
+
+        n = vsup.LeerString("\n Nombre: ");
+        c =  vsup.LeerString("\n Cedula: ");
+
+        mcar.getCliente().setNombre(n);
+        mcar.getCliente().setCedula(c);
+
+       do{
+
+           cod = vsup.LeerString("\n Codigo del articulo: ");
+           MProducto mpro;
+           while (msup.BuscarArticuloCod(cod, mpro) == false){
+               vsup.ImprimirMensaje ("\n El Codigo no existe en la base de datos: \n");
+               vsup.Pausa();
+               cod = vsup.LeerString("\n Codigo del articulo: ");
+           }
+           cout<<"broma. "<<mpro.getNombre()<<endl;
+
+           /*  if (msup.BuscarArticuloCod("12", mpro ) != false){
+                cout<<"broma. "<<mpro.getNombre()<<endl;
+            } else{
+                cout<<"no hay nada"<<endl;
+            }*/
+
+           resp = vsup.LeerValidarNro("\n Desea Agregar otro articulo al carrito? (1)Si (2)No : ", 1, 2);
+       }while(resp==1);
+
+
+
+    }else{
+        vsup.ImprimirMensaje("\n TIENEN QUE ESTAR CARGADAS LAS CAJAS  Y LOS ARTICULOS \n");
     }
 
 }

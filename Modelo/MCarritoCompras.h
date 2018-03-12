@@ -10,10 +10,10 @@
 #include "MCliente.h"
 
 class MCarritoCompras {
-public:
+private:
     Pila<MProducto> pilaProductos;
     MCliente cliente;
-private:
+public:
     float CalcularTotalVenta();
     int NumProductos();
     float CalcIvaTotal();

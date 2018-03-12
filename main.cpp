@@ -52,8 +52,8 @@ int main()
         vg.Limpiar();
         vg.ImprimirEncabezado("\n      M E N U  O P C I O N E S\n","      =======  ===============");
         vg.ImprimirMensaje("   1. CARGAR CAJEROS\n");
-        vg.ImprimirMensaje("   2. CARGAR CARRITOS\n");
-        vg.ImprimirMensaje("   3. CARGAR ARTICULOS\n");
+        vg.ImprimirMensaje("   2. CARGAR ARTICULOS\n");
+        vg.ImprimirMensaje("   3. PROCESAR CARRITOS\n");
         vg.ImprimirMensaje("   4. REPORTE\n");
         vg.ImprimirMensaje("   5. FINALIZAR\n\n");
         opc = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,5);
@@ -61,9 +61,9 @@ int main()
         {
             case 1: //c.CargarPeliculas();
                 break;
-            case 2: //c.CargarSalas();
+            case 2: c.CargarArticulos();
                 break;
-            case 3: c.CargarArticulos();
+            case 3: c.ProcesarCarrito();
                 break;
             case 4: //c.ReporteCinex();
                 break;
