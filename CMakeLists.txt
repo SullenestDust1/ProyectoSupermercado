@@ -3,7 +3,7 @@ project(ProyectoSupermercado)
 
 set(CMAKE_CXX_STANDARD 17)
 
-ADD_LIBRARY(StaticLib STATIC
+ADD_LIBRARY(LibreriaEstatica STATIC
         Librerias/Genericas/MArticulo.cpp Librerias/Genericas/VGeneral.cpp Librerias/Genericas/VGeneral.cpp
         Vista/VSupermercado.cpp
         Modelo/MSupermercado.cpp Modelo/MCajaRegistradora.cpp Modelo/MCajero.cpp
@@ -14,4 +14,4 @@ ADD_LIBRARY(StaticLib STATIC
 
 add_executable(ProyectoSupermercado main.cpp)
 
-TARGET_LINK_LIBRARIES( ProyectoSupermercado StaticLib )
+TARGET_LINK_LIBRARIES( ProyectoSupermercado LibreriaEstatica)
