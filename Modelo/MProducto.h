@@ -1,7 +1,7 @@
 //
 // Created by marco on 3/9/18.
 //
-
+//
 #ifndef PROYECTOSUPERMERCADO_MPRODUCTO_H
 #define PROYECTOSUPERMERCADO_MPRODUCTO_H
 
@@ -18,11 +18,10 @@ public:
     const string &getFechaExp() const;
     void setFechaExp(const string &fechaExp);
     double getPeso() const;
-    void setPeso(float peso);
+    void setPeso(double peso);
     const string &getNombre() const;
     void setNombre(const string &nombre);
-    float CalcIva();
-
+    double CalcIva();
 
 };
 

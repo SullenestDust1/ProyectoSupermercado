@@ -1,3 +1,4 @@
+//
 #include "Pila.h"
 template <class Tipo>
 Pila<Tipo>::Pila()
@@ -72,7 +73,7 @@ Nodopila<Tipo>* Pila<Tipo>::ObtTope()
 template <class Tipo>
 void Pila<Tipo>::AsigTope(Nodopila<Tipo> *p)
 {
-  Tope = *p;
+  Tope = p;
 };
 
 //===========================================================================
@@ -87,8 +88,29 @@ template <class Tipo>
 void Pila<Tipo>::AsigInfo(Nodopila<Tipo> *p,Tipo x)
 {
   p->info = x;
-};         
-	     
+};
 
+template<class Tipo>
+int Pila<Tipo>::numElementos() {
+  Tipo valor;
+  Pila<Tipo> pilaAux;
+  int cont=0;
+  if (Vacia()) {
+    return 0;
+  } else {
+    do {
+      Remover(valor);
+      pilaAux.Insertar(valor);
+      cont++;
+    } while (Tope != NULL);
+
+    for (int i = 0; i < cont; ++i) {
+      pilaAux.Remover(valor);
+      Insertar(valor);
+    }
+
+    return cont;
+  }
+}
 
 
