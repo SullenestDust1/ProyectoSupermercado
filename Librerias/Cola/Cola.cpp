@@ -1,3 +1,5 @@
+#include "Cola.h"
+
 template <class Tipo>
 Cola<Tipo>::Cola() {
      Frente=NULL;

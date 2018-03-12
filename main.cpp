@@ -18,11 +18,12 @@ int main()
 {
     int opc;
     VGeneral  vg;
-    MSupermercado ms;
+    Controlador c;
+    /*MSupermercado ms;
     MCajaRegistradora mc;
     MCarritoCompras mcc;
     MProducto mp;
-    Controlador c;
+    Controlador c;*/
     do
     {
         vg.Limpiar();

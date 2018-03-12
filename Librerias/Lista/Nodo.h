@@ -15,6 +15,5 @@ class Nodo  {
        Nodo<Tipo>* ObtDer();   
        };
 
-#include "Nodo.cpp"
 #endif
 

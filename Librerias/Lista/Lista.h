@@ -1,6 +1,10 @@
+#include "Nodo.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
 #ifndef Lista_H
 #define Lista_H
-#include "Nodo.h"
 
 template <class Tipo>
 class Lista
@@ -26,5 +30,4 @@ public:
 };
 
 
-#include "Lista.cpp"
 #endif

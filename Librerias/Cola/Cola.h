@@ -1,6 +1,9 @@
 #ifndef Cola_H
 #define Cola_H
 
+#include "string"
+using namespace std;
+
 template <class Tipo>
 class Cola;
 
@@ -24,5 +27,4 @@ bool Insertar(Tipo Valor);
 bool Remover(Tipo &Valor);
 };
 
-#include "Cola.cpp"
 #endif

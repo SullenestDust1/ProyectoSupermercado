@@ -1,23 +1,24 @@
 //
 // Created by marco on 3/9/18.
 //
+#include "../Librerias/Cola/Cola.h"
+#include "MCarritoCompras.h"
+#include "MCajero.h"
 
 #ifndef PROYECTOSUPERMERCADO_MCAJAREGISTRADORA_H
 #define PROYECTOSUPERMERCADO_MCAJAREGISTRADORA_H
 //
-#include "../Librerias/Cola/Cola.h"
-#include "MCarritoCompras.h"
-#include "MCajero.h"
+
 class MCajaRegistradora {
 private:
-    Cola<MCarritoCompras> colaCarros;
-    MCajero cajero;
+    /*Cola<MCarritoCompras> colaCarros;
+    MCajero cajero;*/
 
 public:
-    float CalcCorteVentas();
+   /* float CalcCorteVentas();
     float CalcTotalVentasDia();
     int NumClientes();
-    int ProductosVendidos();
+    int ProductosVendidos();*/
 
 };
 

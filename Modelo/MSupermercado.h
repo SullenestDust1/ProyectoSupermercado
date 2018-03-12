@@ -7,11 +7,14 @@
 
 #include "../Librerias/Lista/Lista.h"
 #include "MCajaRegistradora.h"
+
 class MSupermercado {
 private:
     Lista<MCajaRegistradora> ListaCajas;
 
 public:
+
+
     float CalcTotalVentasDia();
     int ClientesAtentidos();
 

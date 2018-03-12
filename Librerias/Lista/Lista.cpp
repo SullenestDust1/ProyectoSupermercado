@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
 #include "Lista.h"
-using namespace std;
 
 template <class Tipo>
 Nodo<Tipo>* Lista<Tipo>::ObtPrimero(){
@@ -136,7 +133,7 @@ bool Lista<Tipo>::InsOrdenado(Tipo valor){
                 return true;
             }
 
-            while(ap != nullptr){
+            while(ap != NULL){
                 ap2 = ap;
                 ap = ap->ObtDer();
                 val2 = ap->ObtInfo();
@@ -146,7 +143,7 @@ bool Lista<Tipo>::InsOrdenado(Tipo valor){
                 }
                 ap=ap->ObtDer();
             }
-            if(ap == nullptr){
+            if(ap == NULL){
                 InsFinal(valor);
                 return true;
             }else

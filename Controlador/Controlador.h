@@ -15,7 +15,6 @@ private:
     bool chequeocajas; // chequeopeli,chequeoentrada;  //! los checkeos
 public:
     Controlador();
-
     void CargarCajas();
    /* void CargarSalas();
     void CargarPeliculas();

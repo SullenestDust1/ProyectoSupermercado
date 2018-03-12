@@ -1,21 +1,15 @@
 //
 // Created by marco on 3/9/18.
 //
+#include "../Librerias/Genericas/MArticulo.h"
+#include "../Librerias/Genericas/MHumano.h"
+//#include "../Librerias/Genericas/MPersona.cpp"
 
 #ifndef PROYECTOSUPERMERCADO_MCAJERO_H
 #define PROYECTOSUPERMERCADO_MCAJERO_H
-
-#include "../Librerias/Genericas/MPersona.cpp"
-
-class MCajero: public MPersona {
+class MCajero: public MHumano{
 public:
-    string codigo;
 
-    const string &getCodigo() const;
-
-    void setCodigo(const string &codigo);
-
-private:
 
 
 };
