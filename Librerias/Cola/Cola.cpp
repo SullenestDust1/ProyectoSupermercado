@@ -56,3 +56,31 @@ bool Cola<Tipo>::Remover(Tipo &Valor){
      else
      return false;
 };
+//Solo sirve con numeros
+template <class Tipo>
+int Cola<Tipo>::NumeroElementos(Tipo valor){
+    Tipo v2;
+    int cont=0;
+    if(Vacia())
+        return 0;
+    else{
+        Remover(v2);
+        Insertar(valor);
+        cont++;
+        if(valor == Frente->info){
+            Remover(v2);
+            return 1;
+        }
+        else{
+            do{
+                Remover(v2);
+                Insertar(v2);
+                cont++;
+            }while(valor != Frente->info);
+            Remover(v2);
+            return cont;
+        }
+
+    }
+}
+
