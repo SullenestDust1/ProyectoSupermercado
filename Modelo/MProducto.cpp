@@ -8,7 +8,7 @@ MProducto::MProducto() {
 
 }
 
-float MProducto::CalcIva() {
+double MProducto::CalcIva() {
     return pvp * 0.12;
 }
 
@@ -24,7 +24,7 @@ double MProducto::getPeso() const {
     return peso;
 }
 
-void MProducto::setPeso(float peso) {
+void MProducto::setPeso(double peso) {
     MProducto::peso = peso;
 }
 

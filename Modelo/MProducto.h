@@ -18,11 +18,10 @@ public:
     const string &getFechaExp() const;
     void setFechaExp(const string &fechaExp);
     double getPeso() const;
-    void setPeso(float peso);
+    void setPeso(double peso);
     const string &getNombre() const;
     void setNombre(const string &nombre);
-    float CalcIva();
-
+    double CalcIva();
 
 };
 
