@@ -28,4 +28,5 @@ public:
 };
 
 
+#include "Lista.cpp"
 #endif

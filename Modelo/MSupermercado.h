@@ -4,7 +4,6 @@
 
 #ifndef PROYECTOSUPERMERCADO_MSUPERMERCADO_H
 #define PROYECTOSUPERMERCADO_MSUPERMERCADO_H
-
 #include "../Librerias/Lista/Lista.h"
 #include "MCajaRegistradora.h"
 

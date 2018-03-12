@@ -1,14 +1,33 @@
-/*#include "Librerias/Lista/Lista.h"
-#include "Librerias/Cola/Cola.h"
-#include "Librerias/Pila/Pila.h"
-int main() {
-    Lista<int> lista;
-    Cola<int> cola;
-    Pila<int> pila;
-    return 0;
-}
-//*/
-
+/*#include <cstdlib>
+#include <iostream>
+#include "Librerias/Lista/Lista.h"
+using namespace std;
+int main()
+{
+    Lista<int> Lista1;
+    Nodo<int> *ap;
+    int valor;
+    for(int i=0; i<10;i++) {
+        cout << "Introduzca un numero: " << endl;
+        cin >> valor;
+        if (Lista1.Vacia()) {
+            Lista1.InsComienzo(valor);
+            ap=Lista1.ObtPrimero();
+        }
+        else {
+            Lista1.InsDerecho(ap,valor);
+            ap=ap->ObtDer();
+        }
+    }
+    ap=Lista1.ObtPrimero();
+    while(ap!=NULL) {
+        valor=ap->ObtInfo(ap);
+        cout << "valor: " << valor << endl;
+        ap=ap->ObtDer();
+    }
+    //  system("PAUSE");
+    return EXIT_SUCCESS;
+}*/
 
 #include "Librerias/Genericas/VGeneral.h"
 #include "Modelo/MSupermercado.h"
