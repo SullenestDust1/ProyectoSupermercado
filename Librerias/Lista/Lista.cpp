@@ -33,7 +33,7 @@ bool Lista<Tipo>::Llena(){
     }   
 };  
 
-template <class Tipo>
+/*template <class Tipo>
 Lista<Tipo>::~Lista(){
  Nodo<Tipo> *p;
   while (!Vacia())
@@ -43,7 +43,7 @@ Lista<Tipo>::~Lista(){
         primero=p;     
    };
  
-};
+};*/
 
 template <class Tipo>
 bool Lista<Tipo>::InsComienzo(Tipo Valor){

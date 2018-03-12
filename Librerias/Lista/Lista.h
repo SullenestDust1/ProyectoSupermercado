@@ -1,11 +1,9 @@
+#ifndef Lista_H
+#define Lista_H
 #include "Nodo.h"
 #include <iostream>
 #include <string>
 using namespace std;
-
-#ifndef Lista_H
-#define Lista_H
-
 template <class Tipo>
 class Lista
 {  
@@ -24,7 +22,7 @@ public:
     bool EliDerecho(Apuntador p,Tipo &valor);
     bool InsFinal(Tipo valor); //Hecho
     bool InsOrdenado(Tipo valor);  //Hecho No probado
-    ~Lista();
+   // ~Lista();
          	     
 
 };

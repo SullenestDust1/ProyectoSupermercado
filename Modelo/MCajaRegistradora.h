@@ -11,8 +11,8 @@
 
 class MCajaRegistradora {
 private:
-    /*Cola<MCarritoCompras> colaCarros;
-    MCajero cajero;*/
+    Cola<MCarritoCompras> colaCarros;
+    MCajero cajero;
 
 public:
    /* float CalcCorteVentas();

@@ -11,3 +11,7 @@ int MSupermercado::ClientesAtentidos() {
 float MSupermercado::CalcTotalVentasDia() {
     return 0;
 }
+
+MSupermercado::MSupermercado() {
+this->a = new Lista<int>();
+}

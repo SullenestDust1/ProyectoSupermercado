@@ -10,11 +10,11 @@
 
 class MSupermercado {
 private:
-    Lista<MCajaRegistradora> ListaCajas;
+    //Lista<MCajaRegistradora> ListaCaja;
+    Lista<int> *a;
 
 public:
-
-
+    MSupermercado();
     float CalcTotalVentasDia();
     int ClientesAtentidos();
 
