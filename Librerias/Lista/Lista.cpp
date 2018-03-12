@@ -31,9 +31,20 @@ bool Lista<Tipo>::Llena(){
       delete p;
       return false;       
     }   
-};  
+};
+template <class Tipo>
+Nodo<Tipo>* Lista<Tipo>::BuscarElemento(Tipo valor){
+    Nodo<Tipo>* ap = this->primero;
+    while(ap !=NULL) {  //preguntas si no esta apuntando a null osea que si hay nodos
+        if (ap->ObtInfo() == valor){
+            return ap;
+        }
+        ap=ap->ObtDer();
+    }
+    return ap;
+};
 
-/*template <class Tipo>
+template <class Tipo>
 Lista<Tipo>::~Lista(){
  Nodo<Tipo> *p;
   while (!Vacia())
@@ -42,8 +53,8 @@ Lista<Tipo>::~Lista(){
         delete primero;
         primero=p;     
    };
- 
-};*/
+
+};
 
 template <class Tipo>
 bool Lista<Tipo>::InsComienzo(Tipo Valor){
@@ -152,7 +163,16 @@ bool Lista<Tipo>::InsOrdenado(Tipo valor){
     }else
         return false;
 }
-
+template <class Tipo>
+int Lista<Tipo>::Total(){
+    int total=0;
+    Nodo<Tipo>* ap = this->primero;
+    while(ap!=NULL) {  //preguntas si no esta apuntando a null osea que si hay nodos
+        ap=ap->ObtDer();
+        total++;
+    }
+    return total;
+};
 template <class Tipo>
 bool Lista<Tipo>::EliDerecho(Apuntador p,Tipo &valor) {
   Apuntador viejo;  
