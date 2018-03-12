@@ -10,7 +10,7 @@ ADD_LIBRARY(LibreriaEstatica STATIC
         Modelo/MCarritoCompras.cpp
         Librerias/Genericas/MHumano.cpp
         Controlador/Controlador.cpp
-        Modelo/MCliente.cpp Modelo/MCliente.h)
+        Modelo/MCliente.cpp Modelo/MProducto.cpp)
 
 add_executable(ProyectoSupermercado main.cpp)
 
