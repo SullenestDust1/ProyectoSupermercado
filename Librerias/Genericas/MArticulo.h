@@ -8,20 +8,20 @@ class MArticulo
 {
    protected:
       string codigo,desc;
-      float pvp,costo;
+      double pvp,costo;
       int tipo;
    public: 
       MArticulo();
-      MArticulo(string,string,float,float,int);
+      MArticulo(string,string,double,double,int);
       void SetCodigo(string);
       void SetDesc(string);
-      void SetPvp(float);
-      void SetCosto(float);
+      void SetPvp(double);
+      void SetCosto(double);
       void SetTipo(int);
       string GetCodigo();
       string GetDesc();
-      float GetPvp();
-      float GetCosto();
+      double GetPvp();
+      double GetCosto();
       int GetTipo();
 };
 #endif
