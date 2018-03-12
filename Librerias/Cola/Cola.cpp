@@ -56,7 +56,7 @@ bool Cola<Tipo>::Remover(Tipo &Valor){
      else
      return false;
 };
-//Solo sirve con numeros
+// Solo sirve con numeros
 template <class Tipo>
 int Cola<Tipo>::NumeroElementos(Tipo valor){
     Tipo v2;

@@ -7,7 +7,7 @@ using namespace std;
 
 template<class Tipo>
 class Cola;
-
+//
 template<class Tipo>
 class nodo {
     Tipo info;
