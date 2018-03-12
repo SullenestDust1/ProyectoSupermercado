@@ -19,3 +19,7 @@ int MCarritoCompras::NumProductos() {
 MCliente MCarritoCompras::getCliente() {
     return cliente;
 }
+
+Pila<MProducto> MCarritoCompras::getPilaProductos() {
+    return pilaProductos;
+}
