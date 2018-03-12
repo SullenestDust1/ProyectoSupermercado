@@ -25,7 +25,8 @@ public:
     void CargarCajas();
     void CargarArticulos();
     void ProcesarArticulos();
-    void ProcesarCarritos();
+    void AgregarCarritoCola();
+    void ProcesarCarritoCaja();
    /* void CargarSalas();
     void CargarPeliculas();
     void ProcesarEntradas();

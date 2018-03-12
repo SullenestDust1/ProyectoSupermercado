@@ -11,7 +11,7 @@ Controlador::Controlador() {
 
 void Controlador::CargarCajas() {
     vsup.Limpiar();
-    if (!this->chequeocajas){ //revisar
+    if (this->chequeocajas){ //revisar
 
         string n,a,c;
         for (int i = 0; i < 5; ++i) { //porque son 5 cajas
@@ -100,14 +100,33 @@ void Controlador::ProcesarArticulos() {
 
 }
 
-void Controlador::ProcesarCarritos() { // el carrito lo paso a la caja
+void Controlador::AgregarCarritoCola() { // el carrito lo paso a la caja
     if (this->chequeocajas && this->chequeocarritos) { // revisar{
         long numcola;
         numcola = vsup.LeerValidarNro("\n  A Que cola te quieres ir (1,5) : ",1,5);
-        msup.getCajaRegistradora(numcola).AgregarCarrito(mcar);
-       // mcajreg->
+        cout<<"nombre "<< mcar.getCliente().getNombre();
+        msup.getCajaRegistradora(numcola).AgregarCarrito(mcar);// setear carrito
+
+        //setear carrito vacio
+        //here
         vsup.ImprimirMensaje("\n Carrito Procesados en caja  \n");
 
+    }else{
+        vsup.ImprimirMensaje("\n TIENEN QUE ESTAR PROCESADOS LOS ARTICULOS \n");
+    }
+
+}
+
+void Controlador::ProcesarCarritoCaja() {
+    if (this->chequeocajas && this->chequeocarritos) {
+        long numcaja;
+        numcaja = vsup.LeerValidarNro("\n  Que caja quieres procesar (1,5) : ",1,5);
+        do{
+
+            //msup.getCajaRegistradora(numcaja).
+
+            numcaja = vsup.LeerValidarNro("\n  Que caja quieres procesar (1,5) 6 para salir : ",1,6);
+        }while(numcaja != 6);
     }else{
         vsup.ImprimirMensaje("\n TIENEN QUE ESTAR PROCESADOS LOS ARTICULOS \n");
     }

@@ -22,7 +22,7 @@ int MCajaRegistradora::ProductosVendidos() {
 }
 
 MCajaRegistradora::MCajaRegistradora() {
-
+totalbsf = 0;
 }
 
 MCajero MCajaRegistradora::getMCajero() {
@@ -40,6 +40,14 @@ void MCajaRegistradora::setNumero(long numero) {
 void MCajaRegistradora::AgregarCarrito(MCarritoCompras mcar) {
     this->colaCarros.Insertar(mcar);
 
+}
+
+double MCajaRegistradora::getTotalbsf() const {
+    return totalbsf;
+}
+
+void MCajaRegistradora::setTotalbsf(double totalbsf) {
+    this->totalbsf += totalbsf;
 }
 
 

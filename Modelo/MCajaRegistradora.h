@@ -13,6 +13,8 @@ private:
     Cola<MCarritoCompras> colaCarros;
     MCajero cajero;
     long numero; // numero de la caja registradora
+    double totalbsf; // acumulador
+
 public:
     MCajaRegistradora();
     float CalcCorteVentas();
@@ -21,7 +23,8 @@ public:
     int ProductosVendidos();
     long getNumero() const;
     void setNumero(long numero);
-
+    double getTotalbsf() const;
+    void setTotalbsf(double totalbsf);
     void AgregarCarrito(MCarritoCompras mcar);
     // bromas del clion//
      MCajero getMCajero();

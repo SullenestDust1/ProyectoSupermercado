@@ -56,7 +56,7 @@ int main()
         vg.ImprimirMensaje("   3. PROCESAR ARTICULOS\n");
         vg.ImprimirMensaje("   4. AÑADIR CARRITO A LA COLA\n");
         vg.ImprimirMensaje("   4. PROCESAR CARRITO \n");
-        vg.ImprimirMensaje("   5. REPORTE\n");
+        vg.ImprimirMensaje("   5. CERRAR Y MOSTRAR REPORTE\n");
         vg.ImprimirMensaje("   6. FINALIZAR\n\n");
         opc = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,5);
         switch (opc)
@@ -67,7 +67,7 @@ int main()
                 break;
             case 3: c.ProcesarArticulos();
                 break;
-            case 4: //c.ReporteCinex();
+            case 4:  c.AgregarCarritoCola();
                 break;
         }
     }
