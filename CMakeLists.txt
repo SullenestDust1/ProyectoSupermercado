@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 project(ProyectoSupermercado)
 
-set(CMAKE_CXX_STANDARD 98)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(unititled1 main.cpp Librerias/Genericas/MArticulo.cpp
         Librerias/Genericas/MArticulo.h Librerias/Genericas/VGeneral.cpp Librerias/Genericas/VGeneral.cpp
