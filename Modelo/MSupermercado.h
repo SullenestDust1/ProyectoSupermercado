@@ -10,9 +10,12 @@
 class MSupermercado {
 private:
     Lista<MCajaRegistradora> ListaCaja;
+    Lista<MProducto> ListaArticulos;  //lista de articulos para el supermercado
+    Nodo<MProducto> *approd; //apuntador de productos
 
 public:
     MSupermercado();
+    MProducto BuscarArticuloCod(string cod);
     float CalcTotalVentasDia();
     int ClientesAtentidos();
 

@@ -15,3 +15,7 @@ float MSupermercado::CalcTotalVentasDia() {
 MSupermercado::MSupermercado() {
 
 }
+
+MProducto MSupermercado::BuscarArticuloCod(string cod) {
+    
+}

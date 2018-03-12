@@ -63,7 +63,7 @@ int main()
                 break;
             case 2: //c.CargarSalas();
                 break;
-            case 3: //c.ProcesarEntradas();
+            case 3: c.CargarArticulos();
                 break;
             case 4: //c.ReporteCinex();
                 break;
