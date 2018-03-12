@@ -20,7 +20,7 @@ void MProducto::setFechaExp(const string &fechaExp) {
     MProducto::fechaExp = fechaExp;
 }
 
-float MProducto::getPeso() const {
+double MProducto::getPeso() const {
     return peso;
 }
 

@@ -10,10 +10,10 @@ void MArticulo::SetCodigo(string c) {
 void MArticulo::SetDesc(string d) {
 	desc = d;
 }
-void MArticulo::SetPvp(float p) {
+void MArticulo::SetPvp(double p) {
 	pvp = p;
 }
-void MArticulo::SetCosto(float c) {
+void MArticulo::SetCosto(double c) {
 	costo = c;
 }
 void MArticulo::SetTipo(int t) {
@@ -26,10 +26,11 @@ string MArticulo::GetCodigo() {
 string MArticulo::GetDesc() {
 	return desc;
 }
-float MArticulo::GetPvp() {
+
+double MArticulo::GetPvp() {
 	return pvp;
 }
-float MArticulo::GetCosto() {
+double MArticulo::GetCosto() {
 	return costo;
 }
 int MArticulo::GetTipo() {
