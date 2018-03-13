@@ -4,6 +4,15 @@
 
 #include "MCarritoCompras.h"
 
+MCarritoCompras::MCarritoCompras() {
+
+}
+
+MCarritoCompras::MCarritoCompras(string x) {
+    cliente.setCedula(x);
+}
+
+
 float MCarritoCompras::CalcularTotalVenta() {
     return 0;
 }
@@ -13,6 +22,14 @@ float MCarritoCompras::CalcIvaTotal() {
 }
 
 int MCarritoCompras::NumProductos() {
+    if(pilaProductos.Vacia())
+        return 0;
+    else
+        do{
+
+
+        }while(nullptr);
+
     return 0;
 }
 
@@ -23,3 +40,9 @@ MCliente MCarritoCompras::getCliente() {
 Pila<MProducto> MCarritoCompras::getPilaProductos() {
     return pilaProductos;
 }
+
+void MCarritoCompras::setCliente(MCliente mc) {
+    cliente = mc;
+}
+
+

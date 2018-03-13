@@ -14,12 +14,14 @@ private:
     Pila<MProducto> pilaProductos;
     MCliente cliente;
 public:
+    MCarritoCompras();
+    MCarritoCompras(string x); //Construcctor con cedula del cliente
     float CalcularTotalVenta();
     int NumProductos();
     float CalcIvaTotal();
     Pila<MProducto> getPilaProductos();
     MCliente getCliente();
-
+    void setCliente(MCliente mc);
 
 };
 
