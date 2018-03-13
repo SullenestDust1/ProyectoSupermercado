@@ -15,8 +15,8 @@ private:
     long numero; // numero de la caja registradora
 public:
     MCajaRegistradora();
-    float CalcCorteVentas();
-    float CalcTotalVentasDia();
+    double CalcCorteVentas();
+    double CalcTotalVentasDia();
     int ProductosVendidos();
     long getNumero() const;
     void setNumero(long numero);

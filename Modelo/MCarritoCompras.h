@@ -16,9 +16,9 @@ private:
 public:
     MCarritoCompras();
     MCarritoCompras(string x); //Construcctor con cedula del cliente
-    float CalcularTotalVenta();
+    double CalcularTotalVenta();
     int NumProductos();
-    float CalcIvaTotal();
+    double CalcIvaTotal();
     Pila<MProducto> getPilaProductos();
     MCliente getCliente();
     void setCliente(MCliente mc);

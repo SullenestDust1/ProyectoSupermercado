@@ -12,25 +12,34 @@ MCarritoCompras::MCarritoCompras(string x) {
     cliente.setCedula(x);
 }
 
-
-float MCarritoCompras::CalcularTotalVenta() {
-    return 0;
+//falta probar el ciclo para los dos metodos
+double MCarritoCompras::CalcularTotalVenta() {
+    int x = pilaProductos.numElementos();
+    MProducto productoAux;
+    double acumVentas;
+    for (int i = 0; i < x; ++i) {
+        pilaProductos.Remover(productoAux);
+        acumVentas += productoAux.GetPvp();
+        pilaProductos.Insertar(productoAux);
+    }
+    acumVentas += CalcIvaTotal();
+    return acumVentas;
 }
 
-float MCarritoCompras::CalcIvaTotal() {
-    return 0;
+double MCarritoCompras::CalcIvaTotal() {
+    int x = pilaProductos.numElementos();
+    MProducto productoAux;
+    double acumIva;
+    for (int i = 0; i < x; ++i) {
+        pilaProductos.Remover(productoAux);
+        acumIva += productoAux.CalcIva();
+        pilaProductos.Insertar(productoAux);
+    }
+    return acumIva;
 }
 
 int MCarritoCompras::NumProductos() {
-    if(pilaProductos.Vacia())
-        return 0;
-    else
-        do{
-
-
-        }while(nullptr);
-
-    return 0;
+    return pilaProductos.numElementos();
 }
 
 MCliente MCarritoCompras::getCliente() {
