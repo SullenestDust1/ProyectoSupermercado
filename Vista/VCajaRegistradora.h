@@ -10,7 +10,7 @@ class VCajaRegistradora: public VGeneral {
 public:
     VCajaRegistradora();
 
-    void ImprimirCajaR(int tclientatend, int cantidadprodvend, float montobsf);
+    void ImprimirCajaR(int tclientatend, int cantidadprodvend, double montobsf);
 };
 //
 

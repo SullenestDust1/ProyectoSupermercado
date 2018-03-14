@@ -55,10 +55,10 @@ int main()
         vg.ImprimirMensaje("   2. CARGAR ARTICULOS\n");
         vg.ImprimirMensaje("   3. PROCESAR ARTICULOS\n");
         vg.ImprimirMensaje("   4. AÑADIR CARRITO A LA COLA\n");
-        vg.ImprimirMensaje("   4. PROCESAR CARRITO \n");
-        vg.ImprimirMensaje("   5. CERRAR Y MOSTRAR REPORTE\n");
-        vg.ImprimirMensaje("   6. FINALIZAR\n\n");
-        opc = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,5);
+        vg.ImprimirMensaje("   5. PROCESAR CARRITO \n");
+        vg.ImprimirMensaje("   6. CERRAR Y MOSTRAR REPORTE\n");
+        vg.ImprimirMensaje("   7. FINALIZAR\n\n");
+        opc = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,6);
         switch (opc)
         {
             case 1: c.CargarCajas();
@@ -68,6 +68,10 @@ int main()
             case 3: c.ProcesarArticulos();
                 break;
             case 4:  c.AgregarCarritoCola();
+                break;
+            case 5:  c.ProcesarCarritoCaja();
+                break;
+            case 6:  c.CerrarCajaReporte();
                 break;
         }
     }
