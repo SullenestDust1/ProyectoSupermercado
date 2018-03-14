@@ -13,17 +13,22 @@ private:
     Cola<MCarritoCompras> colaCarros;
     MCajero cajero;
     long numero; // numero de la caja registradora
+    int contCarritosAtendidos;
 public:
     MCajaRegistradora();
-    double CalcCorteVentas();
+    double CalcCorteVentas(int n);
     double CalcTotalVentasDia();
-    int ProductosVendidos();
-    long getNumero() const;
-    void setNumero(long numero);
+    int NumProductosVendidos();
+    int NumProdctosVendidos(int n);  // numero de productos vendidos hasta el carrito n
     void AgregarCarrito(MCarritoCompras mcar);
     int ContarCarritos();
-    // bromas del clion//
-     MCajero getMCajero();
+
+    MCajero getMCajero();
+    void setCajero(const MCajero &cajero);
+    long getNumero() const;
+    void setNumero(long numero);
+    int getContCarritosAtendidos() const;
+    void setContCarritosAtendidos(int contCarritosAtendidos);
 
 };
 

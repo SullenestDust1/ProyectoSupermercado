@@ -8,22 +8,53 @@ MCajaRegistradora::MCajaRegistradora() {
 
 }
 
-double MCajaRegistradora::CalcCorteVentas() {
-    return 0;
+//
+double MCajaRegistradora::CalcCorteVentas(int n) {
+    MCarritoCompras aux;
+    double acumVentas = 0;
+    for (int i = 0; i < n ; ++i) {
+        colaCarros.Remover(aux);
+        acumVentas += aux.CalcularTotalVenta();
+        colaCarros.Insertar(aux);
+    }
+    return acumVentas;
 }
 
 double MCajaRegistradora::CalcTotalVentasDia() {
-    return 0;
+    int numCarritos = ContarCarritos();
+    MCarritoCompras aux;
+    double acumVentas = 0;
+    for (int i = 0; i < numCarritos; ++i) {
+        colaCarros.Remover(aux);
+        acumVentas += aux.CalcularTotalVenta();
+        colaCarros.Insertar(aux);
+    }
+    return acumVentas;
 }
 
-int MCajaRegistradora::ProductosVendidos() {
-    return 0;
+int MCajaRegistradora::NumProductosVendidos() {
+    int numCarritos = ContarCarritos();
+    MCarritoCompras aux;
+    int productosVendidos = 0;
+    for (int i = 0; i < numCarritos; ++i) {
+        colaCarros.Remover(aux);
+        productosVendidos += aux.NumProductos();
+        colaCarros.Insertar(aux);
+    }
+    return productosVendidos;
 }
 
-
-MCajero MCajaRegistradora::getMCajero() {
-    return this->cajero;
+int MCajaRegistradora::NumProdctosVendidos(int n) {
+    MCarritoCompras aux;
+    int productosVendidos = 0;
+    for (int i = 0; i < n; ++i) {
+        colaCarros.Remover(aux);
+        productosVendidos += aux.NumProductos();
+        colaCarros.Insertar(aux);
+    }
+    return productosVendidos;
 }
+
 
 int MCajaRegistradora::ContarCarritos() {
     MCarritoCompras aux;
@@ -61,5 +92,23 @@ void MCajaRegistradora::setNumero(long numero) {
 void MCajaRegistradora::AgregarCarrito(MCarritoCompras mcar) {
     this->colaCarros.Insertar(mcar);
 }
+
+MCajero MCajaRegistradora::getMCajero() {
+    return this->cajero;
+}
+
+void MCajaRegistradora::setCajero(const MCajero &cajero) {
+    MCajaRegistradora::cajero = cajero;
+}
+
+int MCajaRegistradora::getContCarritosAtendidos() const {
+    return contCarritosAtendidos;
+}
+
+void MCajaRegistradora::setContCarritosAtendidos(int contCarritosAtendidos) {
+    MCajaRegistradora::contCarritosAtendidos = contCarritosAtendidos;
+}
+
+
 
 
