@@ -54,4 +54,8 @@ void MCarritoCompras::setCliente(MCliente mc) {
     cliente = mc;
 }
 
+void MCarritoCompras::AgregarProducto(MProducto prod) {
+    pilaProductos.Insertar(prod);
+}
+
 

@@ -20,6 +20,7 @@ public:
     int NumProductos();
     double CalcIvaTotal();
     Pila<MProducto> getPilaProductos();
+    void AgregarProducto(MProducto prod);
     MCliente getCliente();
     void setCliente(MCliente mc);
 
