@@ -10,33 +10,13 @@ MCajaRegistradora::MCajaRegistradora() {
 
 //
 
-int MCajaRegistradora::NumProductosVendidos() {
-    int numCarritos = ContarCarritos();
-    MCarritoCompras aux;
-    int productosVendidos = 0;
-    for (int i = 0; i < numCarritos; ++i) {
-        colaCarros.Remover(aux);
-        productosVendidos += aux.NumProductos();
-        colaCarros.Insertar(aux);
-    }
-    return productosVendidos;
-}
-
-int MCajaRegistradora::NumProdctosVendidos(int n) {
-    MCarritoCompras aux;
-    int productosVendidos = 0;
-    for (int i = 0; i < n; ++i) {
-        colaCarros.Remover(aux);
-        productosVendidos += aux.NumProductos();
-        colaCarros.Insertar(aux);
-    }
-    return productosVendidos;
-}
-
 
 int MCajaRegistradora::ContarCarritos() {
     MCarritoCompras aux;
-    MCarritoCompras sent("9999999");
+    MCarritoCompras sent;
+    MCliente clienteAux;
+    clienteAux.setCedula("000000000009");
+    sent.setCliente(clienteAux);
     int cont = 0;
 
     if (colaCarros.Vacia())
@@ -57,6 +37,14 @@ int MCajaRegistradora::ContarCarritos() {
         return cont;
     }
 
+}
+
+int MCajaRegistradora::getContProductosVendidos() const {
+    return contProductosVendidos;
+}
+
+void MCajaRegistradora::setContProductosVendidos(int contProductosVendidos) {
+    MCajaRegistradora::contProductosVendidos = contProductosVendidos;
 }
 
 long MCajaRegistradora::getNumero() const {
@@ -100,10 +88,14 @@ bool MCajaRegistradora::ProcesarCarrito() {
     if(!colaCarros.Vacia()){
         colaCarros.Remover(aux);
         acumVentas += aux.CalcularTotalVenta();
+        contCarritosAtendidos++;
+        contProductosVendidos += aux.NumProductos();
         return true;
     }else
         return false;
 }
+
+
 
 
 
