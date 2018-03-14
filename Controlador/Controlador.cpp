@@ -89,7 +89,7 @@ void Controlador::ProcesarArticulos() {
                 cod = vsup.LeerString("\n Codigo del articulo: ");
             }
             mcar.AgregarProducto(mpro);
-            cout<<"broma. "<<mpro.getNombre()<<endl;
+            cout<<"broma. "<<mcar.<<endl;
             resp = vsup.LeerValidarNro("\n Desea Agregar otro articulo al carrito? (1)Si (2)No : ", 1, 2);
         }while(resp==1);
 
@@ -108,7 +108,9 @@ void Controlador::AgregarCarritoCola() { // el carrito lo paso a la caja
         cout<<"nombre "<< mcar.getCliente().getNombre();
        //     msup.se
         mcajreg.AgregarCarrito(mcar);
-        msup.AgregarCajaRegistradora()
+       // mcajreg.setNumero(numcola)
+        msup.setCajaRegistradora(numcola, mcajreg);
+
        // msup.getCajaRegistradora(numcola).AgregarCarrito(mcar);// setear carrito
 
         //setear carrito vacio
