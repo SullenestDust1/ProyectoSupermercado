@@ -9,28 +9,6 @@ MCajaRegistradora::MCajaRegistradora() {
 }
 
 //
-double MCajaRegistradora::CalcCorteVentas(int n) {
-    MCarritoCompras aux;
-    double acumVentas = 0;
-    for (int i = 0; i < n ; ++i) {
-        colaCarros.Remover(aux);
-        acumVentas += aux.CalcularTotalVenta();
-        colaCarros.Insertar(aux);
-    }
-    return acumVentas;
-}
-
-double MCajaRegistradora::CalcTotalVentasDia() {
-    int numCarritos = ContarCarritos();
-    MCarritoCompras aux;
-    double acumVentas = 0;
-    for (int i = 0; i < numCarritos; ++i) {
-        colaCarros.Remover(aux);
-        acumVentas += aux.CalcularTotalVenta();
-        colaCarros.Insertar(aux);
-    }
-    return acumVentas;
-}
 
 int MCajaRegistradora::NumProductosVendidos() {
     int numCarritos = ContarCarritos();
@@ -107,6 +85,18 @@ int MCajaRegistradora::getContCarritosAtendidos() const {
 
 void MCajaRegistradora::setContCarritosAtendidos(int contCarritosAtendidos) {
     MCajaRegistradora::contCarritosAtendidos = contCarritosAtendidos;
+}
+
+double MCajaRegistradora::getAcumVentas() const {
+    return acumVentas;
+}
+
+void MCajaRegistradora::setAcumVentas(double acumVentas) {
+    MCajaRegistradora::acumVentas = acumVentas;
+}
+
+void MCajaRegistradora::ProcesarCarrito(MCarritoCompras m) {
+    acumVentas += m.CalcularTotalVenta();
 }
 
 

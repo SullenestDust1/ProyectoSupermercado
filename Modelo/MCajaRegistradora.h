@@ -14,10 +14,11 @@ private:
     MCajero cajero;
     long numero; // numero de la caja registradora
     int contCarritosAtendidos;
+    double acumVentas;  // con esto se consiguen el corte de ventas y el total
+
 public:
     MCajaRegistradora();
-    double CalcCorteVentas(int n);
-    double CalcTotalVentasDia();
+    void ProcesarCarrito(MCarritoCompras m);
     int NumProductosVendidos();
     int NumProdctosVendidos(int n);  // numero de productos vendidos hasta el carrito n
     void AgregarCarrito(MCarritoCompras mcar);
@@ -28,6 +29,9 @@ public:
     void setNumero(long numero);
     int getContCarritosAtendidos() const;
     void setContCarritosAtendidos(int contCarritosAtendidos);
+    double getAcumVentas() const;
+    void setAcumVentas(double acumVentas);
+
 
 };
 
