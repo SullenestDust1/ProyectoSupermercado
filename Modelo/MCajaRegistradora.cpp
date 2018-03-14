@@ -112,3 +112,4 @@ void MCajaRegistradora::setContCarritosAtendidos(int contCarritosAtendidos) {
 
 
 
+

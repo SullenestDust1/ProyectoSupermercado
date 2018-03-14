@@ -18,9 +18,11 @@ void Controlador::CargarCajas() {
 
             n = vsup.LeerString("\n Nombre: ");
             c = vsup.LeerString("\n Cedula: ");
-
-            mcajreg.getMCajero().setNombre(n);
-            mcajreg.getMCajero().setCedula(c);
+            MCajero mcaj;
+            mcaj.setCedula(c);
+            mcaj.setNombre(n);
+            mcajreg.setCajero(mcaj);
+            cout<<"nombre: "<< mcajreg.getMCajero().getNombre()<<endl;
             //  mca
             mcajreg.setNumero(i);
             msup.AgregarCajaRegistradora(mcajreg);

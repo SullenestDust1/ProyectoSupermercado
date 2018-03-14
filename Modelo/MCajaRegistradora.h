@@ -22,7 +22,6 @@ public:
     int NumProdctosVendidos(int n);  // numero de productos vendidos hasta el carrito n
     void AgregarCarrito(MCarritoCompras mcar);
     int ContarCarritos();
-
     MCajero getMCajero();
     void setCajero(const MCajero &cajero);
     long getNumero() const;
