@@ -95,8 +95,14 @@ void MCajaRegistradora::setAcumVentas(double acumVentas) {
     MCajaRegistradora::acumVentas = acumVentas;
 }
 
-void MCajaRegistradora::ProcesarCarrito(MCarritoCompras m) {
-    acumVentas += m.CalcularTotalVenta();
+bool MCajaRegistradora::ProcesarCarrito() {
+    MCarritoCompras aux;
+    if(!colaCarros.Vacia()){
+        colaCarros.Remover(aux);
+        acumVentas += aux.CalcularTotalVenta();
+        return true;
+    }else
+        return false;
 }
 
 

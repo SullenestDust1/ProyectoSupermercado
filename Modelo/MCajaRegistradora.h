@@ -18,7 +18,7 @@ private:
 
 public:
     MCajaRegistradora();
-    void ProcesarCarrito(MCarritoCompras m);
+    bool ProcesarCarrito();
     int NumProductosVendidos();
     int NumProdctosVendidos(int n);  // numero de productos vendidos hasta el carrito n
     void AgregarCarrito(MCarritoCompras mcar);
