@@ -22,7 +22,6 @@ void Controlador::CargarCajas() {
             mcaj.setCedula(c);
             mcaj.setNombre(n);
             mcajreg.setCajero(mcaj);
-            cout<<"nombre: "<< mcajreg.getMCajero().getNombre()<<endl;
             //  mca
             mcajreg.setNumero(i);
             msup.AgregarCajaRegistradora(mcajreg);
@@ -48,7 +47,6 @@ void Controlador::CargarArticulos() {
             d = vsup.LeerString("\n Descripción: ");
             f = vsup.LeerString("\n Fecha de expiracion: ");
             p = vsup.LeerNroDecimal("\n Peso: ");
-
             mpro.setNombre(n);
             mpro.SetCodigo(c);
             mpro.SetPvp(pr);
@@ -77,10 +75,11 @@ void Controlador::ProcesarArticulos() {
         n = vsup.LeerString("\n Nombre: ");
         c =  vsup.LeerString("\n Cedula: ");
         e = vsup.LeerString("\n Correo: ");
-
-        mcar.getCliente().setNombre(n);
-        mcar.getCliente().setCedula(c);
-        mcar.getCliente().setCorreo(e);
+        MCliente mcli;
+        mcli.setNombre(n);
+        mcli.setCedula(c);
+        mcli.setCorreo(e);
+        mcar.setCliente(mcli);
         do{
             cod = vsup.LeerString("\n Codigo del articulo: ");
             MProducto mpro;
@@ -124,11 +123,26 @@ void Controlador::ProcesarCarritoCaja() {
         long numcaja;
         numcaja = vsup.LeerValidarNro("\n  Que caja quieres procesar (1,5) : ",1,5);
         do{
-
-            //msup.getCajaRegistradora(numcaja).
-
+            if (msup.getCajaRegistradora(numcaja).ProcesarCarrito() == true){
+                vsup.ImprimirMensaje("\n CARRITO PROCESARO CON EXITO! \n");
+            }else{
+                vsup.ImprimirMensaje("\n NO HAY MAS CARRITOS PARA PROCESAR! \n");
+            }
             numcaja = vsup.LeerValidarNro("\n  Que caja quieres procesar (1,5) 6 para salir : ",1,6);
         }while(numcaja != 6);
+    }else{
+        vsup.ImprimirMensaje("\n TIENEN QUE ESTAR PROCESADOS LOS ARTICULOS \n");
+    }
+
+}
+
+void Controlador::CerrarCajaReporte() {
+    if (this->chequeocajas && this->chequeocarritos) {
+        long numcaja;
+        VCajaRegistradora vcaj;
+        numcaja = vsup.LeerValidarNro("\n  Que caja quieres CERRAR (1,5) : ",1,5);
+        MCajaRegistradora mcaj = msup.getCajaRegistradora(numcaja);
+        vcaj.ImprimirCajaR(mcaj.getContCarritosAtendidos(), mcaj.getContProductosVendidos(), mcaj.getAcumVentas());
     }else{
         vsup.ImprimirMensaje("\n TIENEN QUE ESTAR PROCESADOS LOS ARTICULOS \n");
     }

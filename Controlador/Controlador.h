@@ -8,6 +8,7 @@
 
 #include "../Modelo/MSupermercado.h"
 #include "../Vista/VSupermercado.h"
+#include "../Vista/VCajaRegistradora.h"
 class Controlador {
 private:
 
@@ -27,6 +28,7 @@ public:
     void ProcesarArticulos();
     void AgregarCarritoCola();
     void ProcesarCarritoCaja();
+    void CerrarCajaReporte();
    /* void CargarSalas();
     void CargarPeliculas();
     void ProcesarEntradas();

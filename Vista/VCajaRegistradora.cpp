@@ -6,7 +6,7 @@
 
 VCajaRegistradora::VCajaRegistradora() {}
 
-void VCajaRegistradora::ImprimirCajaR(int tclientatend, int cantidadprodvend, float montobsf) {
+void VCajaRegistradora::ImprimirCajaR(int tclientatend, int cantidadprodvend, double montobsf) {
     Limpiar();
     ImprimirEncabezado("  INFORMACION DE CAJAS REGISTRADORAS",
                        "  ======================");
