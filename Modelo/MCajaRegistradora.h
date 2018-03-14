@@ -35,7 +35,7 @@ public:
     double getAcumVentas() const;
     void setAcumVentas(double acumVentas);
 
-
+//
 };
 
 #endif //PROYECTOSUPERMERCADO_MCAJAREGISTRADORA_H

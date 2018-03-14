@@ -8,9 +8,6 @@ MCajaRegistradora::MCajaRegistradora() {
 
 }
 
-//
-
-
 int MCajaRegistradora::ContarCarritos() {
     MCarritoCompras aux;
     MCarritoCompras sent;

@@ -1,7 +1,7 @@
 //
 // Created by marco on 3/9/18.
 //
-
+//
 #ifndef PROYECTOSUPERMERCADO_MSUPERMERCADO_H
 #define PROYECTOSUPERMERCADO_MSUPERMERCADO_H
 #include "../Librerias/Lista/Lista.h"
