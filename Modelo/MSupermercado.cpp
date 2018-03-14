@@ -46,7 +46,6 @@ void MSupermercado::AgregarCajaRegistradora(MCajaRegistradora mcaj) {
         ListaCaja.InsComienzo(mcaj);
         aplist = ListaCaja.ObtPrimero();
     } else {
-
         ListaCaja.InsDerecho(aplist, mcaj);
         aplist = aplist->ObtDer();
     }
@@ -60,4 +59,15 @@ MCajaRegistradora MSupermercado::getCajaRegistradora(int i) {
         }
         aplist=aplist->ObtDer();
     }
+}
+
+void MSupermercado::setCajaRegistradora(int i,MCajaRegistradora caja) {
+    aplist = ListaCaja.ObtPrimero();
+    if(aplist != nullptr) {
+        while (aplist->ObtInfo().getNumero() != i) {  //preguntas si no esta apuntando a null osea que si hay nodos
+            aplist = aplist->ObtDer();
+        }
+    }
+    aplist->AsigInfo(caja);
+
 }

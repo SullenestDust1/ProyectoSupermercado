@@ -47,11 +47,11 @@ void MCajaRegistradora::setContProductosVendidos(int contProductosVendidos) {
     MCajaRegistradora::contProductosVendidos = contProductosVendidos;
 }
 
-long MCajaRegistradora::getNumero() const {
+int MCajaRegistradora::getNumero() const {
     return numero;
 }
 
-void MCajaRegistradora::setNumero(long numero) {
+void MCajaRegistradora::setNumero(int numero) {
     this->numero = numero;
 }
 

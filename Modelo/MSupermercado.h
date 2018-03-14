@@ -25,8 +25,11 @@ public:
     /////////////////////////
     void AgregarCajaRegistradora(MCajaRegistradora mcaj);
     MCajaRegistradora getCajaRegistradora(int i);
+    void setCajaRegistradora(int i,MCajaRegistradora caja);
 
 };
+
+
 
 
 #endif //PROYECTOSUPERMERCADO_MSUPERMERCADO_H
