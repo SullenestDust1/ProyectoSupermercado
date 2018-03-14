@@ -16,13 +16,13 @@ MSupermercado::MSupermercado() {
 }
 
 bool MSupermercado::BuscarArticuloCod(string cod, MProducto &mpro) {
-   approd = ListaArticulos.ObtPrimero();
-    while(approd != nullptr) {  //preguntas si no esta apuntando a null osea que si hay nodos
-        if (approd->ObtInfo().GetCodigo() == cod){
-            mpro = approd->ObtInfo();
+   Nodo<MProducto> *auxapprod = ListaArticulos.ObtPrimero(); // cambiando buscar por auxiliar
+    while(auxapprod != nullptr) {  //preguntas si no esta apuntando a null osea que si hay nodos
+        if (auxapprod->ObtInfo().GetCodigo() == cod){
+            mpro = auxapprod->ObtInfo();
             return true;
         }
-        approd=approd->ObtDer();
+        auxapprod=auxapprod->ObtDer();
     }
     return false;
 }
@@ -32,7 +32,6 @@ void MSupermercado::AgregarArticulo(MProducto mpro) {
         ListaArticulos.InsComienzo(mpro);
         approd = ListaArticulos.ObtPrimero();
     } else {
-
         ListaArticulos.InsDerecho(approd, mpro);
         approd = approd->ObtDer();
     }
@@ -58,6 +57,7 @@ MCajaRegistradora MSupermercado::getCajaRegistradora(int i) {
         }
         aplist=aplist->ObtDer();
     }
+
 }
 
 void MSupermercado::setCajaRegistradora(int i,MCajaRegistradora caja) {

@@ -15,7 +15,6 @@ private:
     VSupermercado vsup;
     ///////////////////
     MCarritoCompras mcar; // carrito pajuo;
-    MCajaRegistradora mcajreg; // caja registradora
     MSupermercado msup; // supermercado
     // esto es para cargalos antes
 

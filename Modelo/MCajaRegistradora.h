@@ -18,9 +18,6 @@ private:
     double acumVentas;  // con esto se consiguen el corte de ventas y el total
 
 public:
-    int getContProductosVendidos() const;
-
-    void setContProductosVendidos(int contProductosVendidos);
 
     MCajaRegistradora();
     bool ProcesarCarrito();
@@ -34,7 +31,8 @@ public:
     void setContCarritosAtendidos(int contCarritosAtendidos);
     double getAcumVentas() const;
     void setAcumVentas(double acumVentas);
-
+    int getContProductosVendidos() const;
+    void setContProductosVendidos(int contProductosVendidos);
 //
 };
 

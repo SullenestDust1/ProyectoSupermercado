@@ -12,19 +12,19 @@ Controlador::Controlador() {
 void Controlador::CargarCajas() {
     vsup.Limpiar();
     if (this->chequeocajas){ //revisar
-
+        MCajaRegistradora mcajregi;
         string n,a,c;
-        for (int i = 0; i < 5; ++i) { //porque son 5 cajas
+        for (int i = 1; i <= 2; ++i) { //porque son 5 cajas
 
-            n = vsup.LeerString("\n Nombre: ");
+            n = vsup.LeerString("\n Nombre Cajero: " + i);
             c = vsup.LeerString("\n Cedula: ");
             MCajero mcaj;
             mcaj.setCedula(c);
             mcaj.setNombre(n);
-            mcajreg.setCajero(mcaj);
+            mcajregi.setCajero(mcaj);
             //  mca
-            mcajreg.setNumero(i);
-            msup.InicializarCajaRegistradora(mcajreg);
+            mcajregi.setNumero(i);
+            msup.InicializarCajaRegistradora(mcajregi);
         }
         this->chequeocajas = true;
     }else{
@@ -40,9 +40,14 @@ void Controlador::CargarArticulos() {
         double p,pr;
 
         do {
+            do{
 
-            c = vsup.LeerString("\n Codigo: ");
-            n = vsup.LeerString("\n Nombre: ");
+                c = vsup.LeerString("\n Codigo Producto: ");
+                if (msup.BuscarArticuloCod(c, mpro) == true){
+                    vsup.ImprimirMensaje ("\n El Codigo ya existe en la base de datos!!! \n");
+                }
+            }while (msup.BuscarArticuloCod(c, mpro) == true);
+            n = vsup.LeerString("\n Nombre Producto: ");
             pr = vsup.LeerNroDecimal("\n Precio: ");
             d = vsup.LeerString("\n Descripción: ");
             f = vsup.LeerString("\n Fecha de expiracion: ");
@@ -72,7 +77,7 @@ void Controlador::ProcesarArticulos() {
         string n,c,e;
         string cod;
 
-        n = vsup.LeerString("\n Nombre: ");
+        n = vsup.LeerString("\n Nombre Cliente: ");
         c =  vsup.LeerString("\n Cedula: ");
         e = vsup.LeerString("\n Correo: ");
         MCliente mcli;
@@ -89,7 +94,7 @@ void Controlador::ProcesarArticulos() {
                 cod = vsup.LeerString("\n Codigo del articulo: ");
             }
             mcar.AgregarProducto(mpro);
-            cout<<"broma. "<<mcar.<<endl;
+            //cout<<"broma. "<<mcar.<<endl;
             resp = vsup.LeerValidarNro("\n Desea Agregar otro articulo al carrito? (1)Si (2)No : ", 1, 2);
         }while(resp==1);
 
@@ -104,12 +109,12 @@ void Controlador::ProcesarArticulos() {
 void Controlador::AgregarCarritoCola() { // el carrito lo paso a la caja
     if (this->chequeocajas && this->chequeocarritos) { // revisar{
         long numcola;
+        MCajaRegistradora cajaAux;
         numcola = vsup.LeerValidarNro("\n  A Que cola te quieres ir (1,5) : ",1,5);
-        cout<<"nombre "<< mcar.getCliente().getNombre();
-       //     msup.se
-        mcajreg.AgregarCarrito(mcar);
+        cajaAux = msup.getCajaRegistradora(numcola);
+        cajaAux.AgregarCarrito(mcar);
        // mcajreg.setNumero(numcola)
-        msup.setCajaRegistradora(numcola, mcajreg);
+        msup.setCajaRegistradora(numcola, cajaAux);
 
        // msup.getCajaRegistradora(numcola).AgregarCarrito(mcar);// setear carrito
 
@@ -126,9 +131,12 @@ void Controlador::AgregarCarritoCola() { // el carrito lo paso a la caja
 void Controlador::ProcesarCarritoCaja() {
     if (this->chequeocajas && this->chequeocarritos) {
         long numcaja;
+        MCajaRegistradora mcajaAux;
         numcaja = vsup.LeerValidarNro("\n  Que caja quieres procesar (1,5) : ",1,5);
         do{
-            if (msup.getCajaRegistradora(numcaja).ProcesarCarrito() == true){
+            mcajaAux = msup.getCajaRegistradora(numcaja);
+            if (mcajaAux.ProcesarCarrito() == true){
+                msup.setCajaRegistradora(numcaja,mcajaAux);
                 vsup.ImprimirMensaje("\n CARRITO PROCESARO CON EXITO! \n");
             }else{
                 vsup.ImprimirMensaje("\n NO HAY MAS CARRITOS PARA PROCESAR! \n");

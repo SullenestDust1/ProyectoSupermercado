@@ -5,6 +5,9 @@
 #include "MCajaRegistradora.h"
 
 MCajaRegistradora::MCajaRegistradora() {
+    acumVentas = 0;
+    contCarritosAtendidos = 0;
+    contProductosVendidos = 0;
 
 }
 
@@ -53,7 +56,7 @@ void MCajaRegistradora::setNumero(int numero) {
 }
 
 void MCajaRegistradora::AgregarCarrito(MCarritoCompras mcar) {
-    this->colaCarros.Insertar(mcar);
+    colaCarros.Insertar(mcar);
 }
 
 MCajero MCajaRegistradora::getMCajero() {
@@ -87,6 +90,7 @@ bool MCajaRegistradora::ProcesarCarrito() {
         acumVentas += aux.CalcularTotalVenta();
         contCarritosAtendidos++;
         contProductosVendidos += aux.NumProductos();
+        int x = aux.NumProductos();
         return true;
     }else
         return false;

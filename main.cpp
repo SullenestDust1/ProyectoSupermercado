@@ -39,11 +39,6 @@ int main()
     int opc;
     VGeneral  vg;
     Controlador c;
-    /*MSupermercado ms;
-    MCajaRegistradora mc;
-    MCarritoCompras mcc;
-    MProducto mp;
-    Controlador c;*/
     vg.Pausa();
     do
     {
@@ -51,11 +46,11 @@ int main()
         vg.ImprimirLineasBlanco(2);
         vg.Limpiar();
         vg.ImprimirEncabezado("\n      M E N U  O P C I O N E S\n","      =======  ===============");
-        vg.ImprimirMensaje("   1. CARGAR CAJEROS\n");
+        vg.ImprimirMensaje("   1. CARGAR CAJAS\n");
         vg.ImprimirMensaje("   2. CARGAR ARTICULOS\n");
-        vg.ImprimirMensaje("   3. PROCESAR ARTICULOS\n");
+        vg.ImprimirMensaje("   3. AGRAGAR ARTICULOS AL CARRITO\n");
         vg.ImprimirMensaje("   4. AÑADIR CARRITO A LA COLA\n");
-        vg.ImprimirMensaje("   5. PROCESAR CARRITO \n");
+        vg.ImprimirMensaje("   5. PROCESAR CAJA \n");
         vg.ImprimirMensaje("   6. CERRAR Y MOSTRAR REPORTE\n");
         vg.ImprimirMensaje("   7. FINALIZAR\n\n");
         opc = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,6);
@@ -75,7 +70,24 @@ int main()
                 break;
         }
     }
-    while(opc != 5);
+    while(opc != 7);
+
 
     return 0;
 }
+
+/*
+MCajaRegistradora caja;
+MCarritoCompras carrito;
+
+MProducto jabon;
+jabon.SetPvp(200);
+jabon.setNombre("Jabon");
+
+carrito.AgregarProducto(jabon);
+carrito.AgregarProducto(jabon);
+
+caja.AgregarCarrito(carrito);
+caja.ProcesarCarrito();
+cout<<carrito.NumProductos()<<endl;
+*/
