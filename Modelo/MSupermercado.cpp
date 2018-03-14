@@ -40,7 +40,7 @@ void MSupermercado::AgregarArticulo(MProducto mpro) {
 
 }
 
-void MSupermercado::AgregarCajaRegistradora(MCajaRegistradora mcaj) {
+void MSupermercado::InicializarCajaRegistradora(MCajaRegistradora mcaj) {
 
     if (ListaCaja.Vacia()) {
         ListaCaja.InsComienzo(mcaj);

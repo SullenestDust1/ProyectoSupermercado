@@ -24,7 +24,7 @@ void Controlador::CargarCajas() {
             mcajreg.setCajero(mcaj);
             //  mca
             mcajreg.setNumero(i);
-            msup.AgregarCajaRegistradora(mcajreg);
+            msup.InicializarCajaRegistradora(mcajreg);
         }
         this->chequeocajas = true;
     }else{
@@ -88,8 +88,8 @@ void Controlador::ProcesarArticulos() {
                 vsup.Pausa();
                 cod = vsup.LeerString("\n Codigo del articulo: ");
             }
-            mcar.getPilaProductos().Insertar(mpro);
-            // cout<<"broma. "<<mpro.getNombre()<<endl;
+            mcar.AgregarProducto(mpro);
+            cout<<"broma. "<<mpro.getNombre()<<endl;
             resp = vsup.LeerValidarNro("\n Desea Agregar otro articulo al carrito? (1)Si (2)No : ", 1, 2);
         }while(resp==1);
 
@@ -106,7 +106,10 @@ void Controlador::AgregarCarritoCola() { // el carrito lo paso a la caja
         long numcola;
         numcola = vsup.LeerValidarNro("\n  A Que cola te quieres ir (1,5) : ",1,5);
         cout<<"nombre "<< mcar.getCliente().getNombre();
-        msup.getCajaRegistradora(numcola).AgregarCarrito(mcar);// setear carrito
+       //     msup.se
+        mcajreg.AgregarCarrito(mcar);
+        msup.AgregarCajaRegistradora()
+       // msup.getCajaRegistradora(numcola).AgregarCarrito(mcar);// setear carrito
 
         //setear carrito vacio
         //here

@@ -23,7 +23,7 @@ public:
     float CalcTotalVentasDia();
     int ClientesAtentidos();
     /////////////////////////
-    void AgregarCajaRegistradora(MCajaRegistradora mcaj);
+    void InicializarCajaRegistradora(MCajaRegistradora mcaj);
     MCajaRegistradora getCajaRegistradora(int i);
 
 };
