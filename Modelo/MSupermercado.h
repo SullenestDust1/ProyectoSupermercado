@@ -1,7 +1,7 @@
 //
 // Created by marco on 3/9/18.
 //
-
+//
 #ifndef PROYECTOSUPERMERCADO_MSUPERMERCADO_H
 #define PROYECTOSUPERMERCADO_MSUPERMERCADO_H
 #include "../Librerias/Lista/Lista.h"
@@ -25,8 +25,11 @@ public:
     /////////////////////////
     void InicializarCajaRegistradora(MCajaRegistradora mcaj);
     MCajaRegistradora getCajaRegistradora(int i);
+    void setCajaRegistradora(int i,MCajaRegistradora caja);
 
 };
+
+
 
 
 #endif //PROYECTOSUPERMERCADO_MSUPERMERCADO_H
